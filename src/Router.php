@@ -9,7 +9,7 @@ class Router {
     }
 
     public function run() {
-        $uri = str_replace('/api-php-native1/public', '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        $uri = str_replace('/api-php-native/public', '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
         $method = $_SERVER['REQUEST_METHOD'];
 
         foreach ($this->routes as $route) {
